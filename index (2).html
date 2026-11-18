@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dhana Priyanka Kora – Portfolio</title>
+<meta name="description" content="CSE student at KL University. Software, web, full stack and AI/ML.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F6F3FF; --surface:#FFFFFF; --ink:#2A2346; --muted:#615A80; --line:#E1DAF5;
+  --accent:#6A48E0; --accent-ink:#FFFFFF; --warm:#F08BA8; --chip:#ECE6FF;
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:17px;line-height:1.6}
+h1,h2,h3{font-family:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;line-height:1.1;margin:0}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--warm);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1020px;margin:0 auto;padding:0 22px}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+header.top .logo{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:1.15rem}
+nav a{margin-left:20px;color:var(--muted);text-decoration:none;font-weight:600}
+nav a:hover{color:var(--accent)}
+.theme{margin-left:20px;background:none;border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:4px 12px;cursor:pointer;font:inherit;font-size:.9rem}
+.hero{display:grid;grid-template-columns:1.5fr 1fr;gap:40px;align-items:center;padding:56px 0 72px}
+.hero h1{font-size:clamp(2.6rem,7vw,5rem);font-weight:800;letter-spacing:-.03em}
+.hero .role{font-size:1.25rem;color:var(--muted);margin:18px 0 8px;max-width:30em}
+.hero p.lead{max-width:34em;margin:0 0 28px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:12px 22px;border-radius:10px;font-weight:600;text-decoration:none;border:2px solid var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.btn.ghost{color:var(--accent)}
+.btn:hover{transform:translateY(-2px)}
+.facts{background:var(--surface);border:1px solid var(--line);border-left:6px solid var(--warm);border-radius:14px;padding:26px}
+.facts dl{margin:0}
+.facts dt{color:var(--muted);font-size:.9rem;margin-top:14px}
+.facts dt:first-child{margin-top:0}
+.facts dd{margin:2px 0 0;font-weight:600;font-size:1.05rem}
+section{padding:56px 0;border-top:1px solid var(--line)}
+section h2{font-size:clamp(1.8rem,4vw,2.4rem);margin-bottom:28px;letter-spacing:-.02em}
+.about p{max-width:44em;margin:0 0 14px}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.skills div{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px}
+.skills h3{font-size:1.1rem;margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.chips li{background:var(--chip);border-radius:999px;padding:4px 13px;font-size:.93rem;font-weight:600}
+.projects{display:grid;gap:18px}
+.project{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:26px;display:grid;grid-template-columns:1fr auto;gap:10px 24px;align-items:start}
+.project h3{font-size:1.4rem}
+.project p{margin:8px 0 14px;max-width:46em;color:var(--muted)}
+.project .links{display:flex;gap:10px;flex-wrap:wrap}
+.project .links a{font-weight:600}
+.roles{display:grid;gap:22px}
+.role-item{display:grid;grid-template-columns:240px 1fr;gap:6px 28px}
+.role-item h3{font-size:1.15rem}
+.role-item .org{color:var(--muted);font-size:.95rem;margin-top:4px}
+.role-item ul{margin:0;padding-left:20px}
+.role-item li{margin-bottom:6px}
+.contact-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.contact-list a{display:block;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 18px;text-decoration:none;color:var(--ink);font-weight:600;overflow-wrap:anywhere}
+.contact-list a span{display:block;color:var(--muted);font-weight:400;font-size:.88rem}
+.contact-list a:hover{border-color:var(--accent)}
+footer{padding:36px 0 48px;color:var(--muted);font-size:.92rem;border-top:1px solid var(--line)}
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;padding:30px 0 48px}
+  .project{grid-template-columns:1fr}
+  .role-item{grid-template-columns:1fr}
+  nav a{margin-left:12px}
+  nav a.hide-sm{display:none}
+}
+@media (prefers-reduced-motion: no-preference){
+  .hero h1,.hero .role,.hero .lead,.btns,.facts{animation:rise .7s both}
+  .hero .role{animation-delay:.08s}.hero .lead{animation-delay:.16s}.btns{animation-delay:.24s}.facts{animation-delay:.3s}
+  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  .btn{transition:transform .15s}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="logo">Priyanka Kora</div>
+    <nav>
+      <a class="hide-sm" href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a class="hide-sm" href="#leadership">Leadership</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div>
+        <h1>Dhana Priyanka Kora</h1>
+        <p class="role">Computer Science &amp; Engineering student focused on cloud native engineering and DevOps.</p>
+        <p class="lead">I build full stack and React applications, and I’m growing my skills in AI/ML. I’m looking for software developer, web developer, full stack and AI/ML opportunities.</p>
+        <div class="btns">
+          <a class="btn primary" href="#projects">See my projects</a>
+          <a class="btn ghost" href="#contact">Get in touch</a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/dhana-priyanka-kora-b9675b366/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="btn ghost" href="https://github.com/Priyanka-787" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+      <aside class="facts" aria-label="Quick facts">
+        <dl>
+          <dt>Studying</dt><dd>B.Tech, Computer Science &amp; Engineering</dd>
+          <dt>University</dt><dd>Koneru Lakshmaiah Education Foundation (KL University)</dd>
+          <dt>CGPA</dt><dd>9.1</dd>
+          <dt>Graduating</dt><dd>2028</dd>
+          <dt>Based in</dt><dd>Undrajavaram, East Godavari, Andhra Pradesh</dd>
+        </dl>
+      </aside>
+    </div>
+
+    <section class="about" id="about">
+      <h2>About me</h2>
+      <p>I’m a third-year CSE student who likes turning ideas into working applications, from the screen a user sees to the logic behind it.</p>
+      <p>Alongside web development, I’m learning cloud and DevOps, machine learning, deep learning and large language models. Outside class, I lead events and design for my university’s Data Science &amp; AI club.</p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills">
+        <div><h3>Programming</h3><ul class="chips"><li>C</li><li>Java</li><li>JavaScript</li><li>SQL</li></ul></div>
+        <div><h3>Front-end</h3><ul class="chips"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>React</li></ul></div>
+        <div><h3>Back-end &amp; data</h3><ul class="chips"><li>Backend development</li><li>DBMS</li><li>SQL</li></ul></div>
+        <div><h3>Cloud &amp; DevOps</h3><ul class="chips"><li>Cloud basics</li><li>DevOps basics</li><li>Git</li></ul></div>
+        <div><h3>AI &amp; ML</h3><ul class="chips"><li>Machine learning basics</li><li>Deep learning basics</li><li>LLM basics</li></ul></div>
+        <div><h3>Tools &amp; soft skills</h3><ul class="chips"><li>VS Code</li><li>Git</li><li>Teamwork</li><li>Communication</li><li>Listening</li></ul></div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects">
+        <article class="project">
+          <div>
+            <h3>SmartCity Application</h3>
+            <p>A full stack web app that brings smart city services into one place. I designed the whole flow: the user interface on the client side, and the logic and data handling on the server side.</p>
+            <ul class="chips"><li>Full stack</li><li>Front-end</li><li>Back-end</li></ul>
+          </div>
+          <div class="links"><a href="https://github.com/Priyanka-787" target="_blank" rel="noopener">GitHub</a></div>
+        </article>
+        <article class="project">
+          <div>
+            <h3>NutriDiet Balance</h3>
+            <p>A diet and nutrition tracker built with React. Users plan their daily meals and keep their nutrition balanced, using interactive components that make tracking quick and easy.</p>
+            <ul class="chips"><li>React</li><li>JavaScript</li><li>Deployed on Vercel</li></ul>
+          </div>
+          <div class="links"><a href="https://nurtridietproject.vercel.app/" target="_blank" rel="noopener">Live demo</a></div>
+        </article>
+        <article class="project">
+          <div>
+            <h3>Higher Education Course Registration and Payment Management System</h3>
+            <p>A system that handles course registration and fee payments for higher education, bringing both into one place so students and administrators can manage them easily.</p>
+            <ul class="chips"><li>Registration</li><li>Payments</li></ul>
+          </div>
+          <div class="links"><a href="https://github.com/Priyanka-787" target="_blank" rel="noopener">GitHub</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="leadership">
+      <h2>Leadership &amp; activities</h2>
+      <div class="roles">
+        <div class="role-item">
+          <div><h3>Event Organizing Head &amp; Designing Co-Lead</h3><div class="org">Data Science &amp; AI Dynamos Club, KL University</div></div>
+          <ul>
+            <li>Lead planning and delivery of the club’s technical events, including logistics, speakers and participant engagement.</li>
+            <li>Create the visual designs and promotional material for club events.</li>
+          </ul>
+        </div>
+        <div class="role-item">
+          <div><h3>PR Executive Head</h3><div class="org">Student Affairs, KL University · 1 year</div></div>
+          <ul>
+            <li>Managed public relations and communication between students and the administration.</li>
+            <li>Built leadership and organizing skills by coordinating student affairs initiatives.</li>
+          </ul>
+        </div>
+        <div class="role-item">
+          <div><h3>Member</h3><div class="org">Broadband Networking Club, KL University</div></div>
+          <ul><li>Explore computer networking concepts and technologies through club activities.</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications">
+      <h2>Certifications</h2>
+      <ul class="chips"><li>NPTEL: Introduction to Machine Learning</li><li>GitHub Copilot certification</li><li>Automation Anywhere certification</li></ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="contact-list">
+        <a href="mailto:dhanapriyankakora@gmail.com"><span>Email</span>dhanapriyankakora@gmail.com</a>
+        <a href="tel:+919515500318"><span>Phone</span>+91 95155 00318</a>
+        <a href="https://www.linkedin.com/in/dhana-priyanka-kora-b9675b366/" target="_blank" rel="noopener"><span>LinkedIn</span>dhana-priyanka-kora</a>
+        <a href="https://github.com/Priyanka-787" target="_blank" rel="noopener"><span>GitHub</span>Priyanka-787</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 Dhana Priyanka Kora</footer>
+</div>
+</body>
+</html>
